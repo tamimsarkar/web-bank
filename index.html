@@ -1,40 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Custom css -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
     
-    <div id="login-area">
-        <div class="container">
-            <div class="row">
-                <form action="">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tj-Bank Limited</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <section id="login-area">
+       <div class="container login-container">
+        
+            <div class="form m-auto ">
+                <h3>Welcome to the profitable TJ Bank Limited</h3>
+                <p class="text-center">Please SIGN IN / <span><a href="#">SIGN UP</a></span></p>
+ 
+             <div class="form-group ">
+               <label for="exampleInputEmail1">Email address</label>
+               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+             </div>
+             <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+               <input type="password" class="form-control" id="exampleInputPassword1">
+             </div>
+             <div class="form-group form-check">
+               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+               <label class="form-check-label" for="exampleCheck1">Remember me</label>
+             </div>
+             <button id="login" type="submit" class="btn btn-primary">Log In</button>
+         </div>
+          </div>
+       
+      </section>
+   
+      <section id="dashboard">
+          <div class="container">
+              <div class="row">
+            <div class="col-md-4">
+                <div class="status">
+                    <h3>Deposit</h3>
+                    <h3>$<span id='currentDeposit'>00</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="status">
+                    <h3>Withdraw</h3>
+                    <h3>$<span id="currentWithdraw">00</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="status">
+                    <h3>Balance</h3>
+                    <h3>$<span id="totalBalance">690</span></h3>
+                </div>
+            </div>
+             </div>
+        </div>
+        <div class="container  dashboard-container">
+            <div class="row ">
+                <div class='col-md-6'>
+                   <div class="currency-input">
+                    <h3>Deposit Amount</h3>
+                    <input id="deposit" type="tel" placeholder="$ Deposit Amount">
+                    <br>
+                    <button id="depositBtn" class="btn btn-success mt-3">Deposit</button>
+                   </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class="currency-input">
+                        <h3>Withdraw Amount</h3>
+                    <input id="withdraw" type="tel" placeholder="$ Withdraw Amount">
                    
-                        <div class="input">
-                            <h6>Email Address</h6>
-                            <input type="email" >
-                        </div>
-                        <div class="input pr-4">
-                            <h6>Password</h6>
-                            <input type="password" >
-                        </div>
-                        <button class="btn btn-success" id="login">Log In</button>
-                   
-                </form>
+                    <br>
+                    <button id="withdrawBtn" class="btn btn-success mt-3">Withdraw</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-   document.getElementById('login').addEventListener('click',function(){
-       console.log('Hello World!');
-   })
+      </section>
 
-</script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
